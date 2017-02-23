@@ -16,7 +16,7 @@ public class LionController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonUp ("Jump")) {
+		if (Input.GetButtonUp ("Jump") || Input.GetMouseButtonDown(0)) {
 			myRigidBody.AddForce (transform.up * playerJumpForce);
 		}
 		myAnim.SetFloat ("vVelocity", myRigidBody.velocity.y);
